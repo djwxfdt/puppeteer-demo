@@ -13,7 +13,13 @@ const port = 3001
 let browser
 
 (async () => {
-  browser = await puppeteer.launch({});
+  browser = await puppeteer.launch({
+    ignoreHTTPSErrors: true,
+    // headless: false,
+    // args: [
+    //     '--proxy-server=localhost:3128'
+    // ]
+  });
 })();
 
   /**
